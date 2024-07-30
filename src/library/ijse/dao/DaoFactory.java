@@ -1,5 +1,7 @@
 package library.ijse.dao;
 
+import library.ijse.dao.custom.impl.BooksDaoImpl;
+
 public class DaoFactory {
     private static DaoFactory daoFactory;
 
@@ -15,7 +17,7 @@ public class DaoFactory {
     public SuperDao getDao(DaoTypes type){
         switch(type){
             case Books:
-               return null;
+               return new BooksDaoImpl();
             default:
                return null;
         }

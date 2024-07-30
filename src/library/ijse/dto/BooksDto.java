@@ -9,34 +9,89 @@ package library.ijse.dto;
  * @author laksh
  */
 public class BooksDto {
-    private Integer book_id;
+    private String book_id;
     private String title;
     private String author;
     private String isbn;
-    private Integer catagory_id;
+    private String category_id;
+    private Boolean available;
+    private Integer book_count;
 
     public BooksDto() {
     }
 
-    public BooksDto(Integer book_id, String title, String author, String isbn, Integer catagory_id) {
+   
+
+
+
+    public BooksDto(String book_id, String title, String author, String isbn, String category_id, Boolean available,
+            Integer book_count) {
         this.book_id = book_id;
         this.title = title;
         this.author = author;
         this.isbn = isbn;
-        this.catagory_id = catagory_id;
+        this.category_id = category_id;
+        this.available = available;
+        this.book_count = book_count;
     }
+
+
+
+
+
+
+
+    public Boolean getAvailable() {
+        return available;
+    }
+
+
+
+
+
+
+
+    public void setAvailable(Boolean available) {
+        this.available = available;
+    }
+
+
+
+
+
+
+
+    public Integer getBook_count() {
+        return book_count;
+    }
+
+
+
+
+
+
+
+    public void setBook_count(Integer book_count) {
+        this.book_count = book_count;
+    }
+
+
+
+
+
+
 
     /**
      * @return the book_id
      */
-    public Integer getBook_id() {
+    public String getBook_id() {
         return book_id;
     }
 
     /**
      * @param book_id the book_id to set
      */
-    public void setBook_id(Integer book_id) {
+    public void setBook_id(String book_id) {
         this.book_id = book_id;
     }
 
@@ -85,15 +140,15 @@ public class BooksDto {
     /**
      * @return the catagory_id
      */
-    public Integer getCatagory_id() {
-        return catagory_id;
+    public String getCategory_id() {
+        return category_id;
     }
 
     /**
-     * @param catagory_id the catagory_id to set
+     * @param category_id the catagory_id to set
      */
-    public void setCatagory_id(Integer catagory_id) {
-        this.catagory_id = catagory_id;
+    public void setCategory_id(String category_id) {
+        this.category_id = category_id;
     }
     
    

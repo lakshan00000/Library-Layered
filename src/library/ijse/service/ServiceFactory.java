@@ -1,5 +1,7 @@
 package library.ijse.service;
 
+import library.ijse.service.custom.impl.BooksServiceImpl;
+
 public class ServiceFactory {
 
       private static ServiceFactory serviceFactory;
@@ -16,7 +18,7 @@ public class ServiceFactory {
       public SuperService getService(ServiceType serviceType){
         switch (serviceType){
             case Books:
-                return null;
+                return new BooksServiceImpl();
             default:
                 return null;    
         }

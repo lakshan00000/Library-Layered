@@ -7,6 +7,8 @@ package library.ijse.controller;
 import java.util.ArrayList;
 
 import library.ijse.dto.BooksDto;
+import library.ijse.service.ServiceFactory;
+import library.ijse.service.custom.BooksService;
 
 /**
  *
@@ -14,20 +16,23 @@ import library.ijse.dto.BooksDto;
  */
 public class BooksController {
 
+    private BooksService booksService = (BooksService)ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.Books);
+
+
     public String save(BooksDto booksDto) throws Exception{
-       return null;
+       return booksService.save(booksDto);
     }
     public String update(BooksDto booksDto) throws Exception{
-        return null; 
+        return booksService.update(booksDto); 
     }
     public String delete (BooksDto booksDto) throws Exception{
-        return null;
+        return booksService.delete(booksDto);
     }
     public ArrayList<BooksDto>getAll() throws Exception{
-        return null;
+        return booksService.getAll() ;
     }
 
     public BooksDto get(String book_id) throws Exception{
-        return null;
+        return booksService.get(book_id);
     }
 }
